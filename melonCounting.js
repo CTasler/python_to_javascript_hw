@@ -26,3 +26,30 @@ function countMelons(melons){
 
 
 console.log(countMelons(melonsToAdd));
+
+
+// Alternate methods: 
+// Using Array.reduce
+// const melonCounts = melonsToAdd.reduce((mCounts, melon) => {
+//     if (mCounts[melon]) {
+//       mCounts[melon] += 1;
+//     } else {
+//       mCounts[melon] = 1;
+//     }
+  
+//     return mCounts;
+//   }, {});
+  
+//   console.log(melonCounts);
+
+// ------------------------------------------------
+
+// Using short-circuit evaluation to set count
+
+// const melonCounts = melonsToAdd.reduce((mCounts, melon) => {
+//   mCounts[melon] = (mCounts[melon] || 0) + 1;
+
+//   return mCounts;
+// }, {});
+
+// console.log(melonCounts);
